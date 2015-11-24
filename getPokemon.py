@@ -59,6 +59,6 @@ def getEquipo3():
 		tipo=getType(s.types)
 		mov1=getMovimiento(404,"Bug")#80
 		mov2=getMovimiento(403,"Flying")#75
-		mov3=getMovimiento(43,"Normal")#DownDefense
+		mov3=getMovimiento(249,"Rock")#40
 		mov4=getMovimiento(38,"Normal")#120
 	return Scyther

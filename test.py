@@ -2,7 +2,8 @@ from decision import decision
 import pykemon
 from getType import getType
 from movimiento import getMovimiento
-from simulador import *
+from batalla import *
+from getElement import *
 
 p=pykemon.get(pokemon="charizard")
 q=pykemon.get(pokemon="poliwrath")
@@ -35,6 +36,6 @@ class Poliwrath():
 prueba = Charizard()
 prueba2 = Poliwrath()
 
-a = simulacion(prueba, prueba2)
+a = getElement(prueba.mov3.tipo,prueba2.tipo)
 print a
 
