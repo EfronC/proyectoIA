@@ -1,5 +1,6 @@
 import random
 #Damage=(attack+damage-defense)resistance
+#prueba
 
 def isNotDead(per):
 	if per.hp>0:
