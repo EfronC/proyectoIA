@@ -16,8 +16,8 @@ def isNotDead(per):
 		return True
 	return False
 
-def batalla(mov,IA,Team):
-	des=random.randint(0,3)
+def batalla(mov,IA,Team, des):
+	
 	if IA.speed>Team.speed:
 		if des == 0:
 			res = getElement(IA.mov1.tipo,Team.tipo)

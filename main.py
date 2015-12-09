@@ -1,22 +1,27 @@
 from getPokemon import *
 from presentacion import *
 from simulador import *
+from getStrategy import *
+import os
 
 IA = getIA()
-aux=IA
 Teams = []
 Teams.append(getEquipo1())
 Teams.append(getEquipo2())
 Teams.append(getEquipo3())
-aux2=Teams
+
+strategy = {"water": " ", "normal": " ", "bug": " "}
+for i in strategy:
+	strategy[i] = startStrategy(i)
 
 a=True
 
 while a:
 	choice = int(presentacion())
 	choice = choice-1
+	os.system('clear')
 
-	win = simulacion(IA,Teams[choice])
+	win = simulacion(IA,Teams[choice], strategy)
 	if win == 1:
 		print "*************************************"
 		print "IA gana"
@@ -28,10 +33,14 @@ while a:
 	des = raw_input("Desea jugar otra partida[Y-N]")
 	if des == 'Y':
 		a=True
+		IA = getIA()
+		Teams = []
+		Teams.append(getEquipo1())
+		Teams.append(getEquipo2())
+		Teams.append(getEquipo3())
 	else:
 		a=False
 
-	#IA=aux
-	#Teams=aux2
+	
 
 

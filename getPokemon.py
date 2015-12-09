@@ -56,7 +56,7 @@ def getEquipo3():
 		defense=s.defense
 		speed=s.speed
 		hp=(s.hp)*10
-		tipo=getType(s.types)
+		tipo="bug"
 		mov1=getMovimiento(404,"Bug")#80
 		mov2=getMovimiento(403,"Flying")#75
 		mov3=getMovimiento(249,"Rock")#40
