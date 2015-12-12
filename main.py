@@ -17,6 +17,7 @@ for i in strategy:
 a=True
 
 while a:
+	os.system('clear')
 	choice = int(presentacion())
 	choice = choice-1
 	os.system('clear')
